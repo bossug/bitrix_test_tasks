@@ -31,3 +31,20 @@
 
 ##  Как отдавать результат
 Сделать fork теккущего репозитория, все изменения фиксировать в git (чем подробнее будет история тем легче нам будет понять компетенцию владения систмами контроля версий). Описать каким образом нам разворчивать среду, чтобы мы могли оценить работоспособность результата
+
+## Подключение компонента
+<p>
+	$APPLICATION->IncludeComponent(
+	"pt:pt.catalog", 
+	".default", 
+	array(
+		"SEF_MODE" => "Y",
+		"IBLOCK_ID" => 21, //ИД инфоблока с товарами
+		"COMPONENT_TEMPLATE" => ".default",
+		"SEF_FOLDER" => "/katalog2/", //раздел каталога
+		"SECTION_ID_VARIABLE" => "SECTION_ID",
+		"SEF_URL_TEMPLATES" => Array("element"=>"#SECTION_ID#/#ELEMENT_ID#/","section"=>"#SECTION_ID#/"),
+	),
+	false
+);
+</p>
