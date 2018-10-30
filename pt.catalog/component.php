@@ -2,7 +2,7 @@
 
 \Bitrix\Main\Loader::includeModule('iblock');
 $arDefaultUrlTemplates404 = array(
-   "list" => "index.php",
+   "section" => "index.php",
    "element" => "/#IBLOCK_ID#/#SECTION_ID#/#ELEMENT_ID#/"
 );
 
@@ -68,5 +68,6 @@ $arResult = array(
    "VARIABLES" => $arVariables,
    "ALIASES" => $arVariableAliases
 );
+print_r($componentPage);
 $this->IncludeComponentTemplate($componentPage);
 ?>
